@@ -1,9 +1,26 @@
-/* 
-1. create a funcition that returns a random # for a coin flip. like 0 or 1.
-2. create an event lisetener that acts as a flip the coin function that fires the random number function.
-3. create a if statement that accounts for the returned value of 0 or 1
-        - score table updates to display the coin flipper results
-        - increase counter for coin
-        - provides a percentage of teh results
-        - updates the photo of the coin after flip
- */
+let maxNumber = 2
+
+//HTML selected elements
+let actionBtn = document.querySelector('.action-btn')
+let objectImg = document.querySelector('.object-img')
+let resultHeader = document.querySelector('.result-header')
+
+/* console.log(actionBtn, objectImg, resultHeader) */
+
+// html table cell element
+let resultOneCount = document.querySelector('.result-one-cnt')
+let resultOnePercent = document.querySelector('.result-one-percent')
+let resultTwoCount = document.querySelector('.result-two-cnt')
+let resultTwoPercent = document.querySelector('.result-two-percent')
+/* console.log(resultOneCount, resultOnePercent, resultTwoCount, resultTwoPercent) */
+
+
+//event listener for flip a button
+actionBtn,addEventListener('click', function(){
+    let randomNumber = Math.ceil(Math.random() * maxNumber)
+    if(randomNumber === 1){
+        console.log('it was one')
+    } else {
+        console.log('it was two')
+    }
+})
